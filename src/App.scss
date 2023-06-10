@@ -1,104 +1,82 @@
-@import "./styles/variables.scss";
-
-.app {
-  // border: $test;
+.App {
+  // border: 2px solid purple;
+  background-color:  hsl(237, 49%, 15%);
+  width: 100vw;
+  height: 800px;
   min-height: 100vh;
-  // height: 100%;
-  width: 100%;
-  overflow: hidden;
-  min-width: 320px;
-  background-color: $app-background-color;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Mouser', sans-serif;
+  z-index: 0;
   position: relative;
+  
 
-  .up-800 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .row-data {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .btn-rules {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: inherit;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 8px;
     }
-  }
-  .display-500-800 {
-    display: none;
-  }
-  .down-500 {
-    display: none;
-  }
-}
 
-.a-modal {
-  background-color: $app-background-color;
-  border-radius: 20px 60px 20px 60px;
-  padding: 2em;
-  min-width: 30%;
-  z-index: 2000;
+  }
+
+}
+.modal {
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  width: 370px;
+  height: 370px;
+  z-index: 100;
 
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  &:focus {
-    outline: none;
-  }
 }
 
-@media screen and (max-width: 800px) {
-  .app {
-    .up-800 {
-      display: none;
-    }
-    .down-500 {
-      display: none;
-    }
-    .display-500-800 {
-      display: flex;
-      flex-direction: column;
-      .row-data {
-        display: flex;
-        flex-direction: row;
-      }
-      .column-data-l,  .column-data-r{
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-      }
-    }
-  }
-  .a-modal {
-    padding: 1em;
-  }
-}
+@media only screen and (max-width: 800px) {
 
-@media screen and (max-width: 500px) {
-  .app {
-    .up-800 {
-      display: none;
-    }
-    .display-500-800 {
-      display: none;
-    }
-    .down-500 {
-      display: flex;
-      flex-direction: column;
-      .row-data-u {
-        display: flex;
-        flex-direction: row;
+  .App {
+    min-width: 350px;  
+    height: 650px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .btn-rules {
+      position:relative;
+      bottom: auto;
+      right: auto;
+      padding: 10px 30px;
+      border-radius: 5px;
+      border: 2px solid white;
+      background-color: inherit;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+  
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 8px;
       }
-      .row-data-d {
-        display: flex;
-        flex-direction: column;
-      }
+  
     }
   }
-
-  .a-modal {
-    padding: 1em;
-  }
-
 }
