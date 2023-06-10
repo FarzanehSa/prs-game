@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import './App.scss';
 // import Score from './Score';
 import MainEasy from './MainEasy';
-// import ResultEasy from './ResultEasy';
+import ResultEasy from './ResultEasy';
 import RulesEasy from './RulesEasy';
 
 // import { ReactComponent as Close } from './images/icon-close.svg';
@@ -13,7 +13,7 @@ import RulesEasy from './RulesEasy';
 
 function App() {
 
-  // const [score, setScore] = useState(0);
+  const [score, setScore] = useState(0);
   const [user, setUser] = useState(null);
   const [openR, setOpenR] = useState(false);
 
@@ -35,11 +35,10 @@ function App() {
       </Modal>
 
       {/* <Score score={score}/> */}
-      <MainEasy user={user} setUser={setUser}/> 
-      {/* {!user ?
-      <MainEasy user={user} setUser={setUser}/> :
+      {!user ?
+      <MainEasy user={user} setUser={setUser} score={score}/> :
       <ResultEasy user={user} setUser={setUser} setScore={setScore}/>
-      } */}
+      }
       <button onClick={() => {setOpenR(true)}} className='btn-rules'>RULES</button>
     </div>
   );
