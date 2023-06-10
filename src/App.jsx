@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Modal from 'react-modal';
 import './App.scss';
-// import Score from './Score';
+import Score from './Score';
 import MainEasy from './MainEasy';
 import ResultEasy from './ResultEasy';
 import RulesEasy from './RulesEasy';
@@ -34,9 +34,9 @@ function App() {
         {openR && <RulesEasy  onClose={closeModal} />}
       </Modal>
 
-      {/* <Score score={score}/> */}
+      <Score score={score}/>
       {!user ?
-      <MainEasy user={user} setUser={setUser} score={score}/> :
+      <MainEasy user={user} setUser={setUser}/> :
       <ResultEasy user={user} setUser={setUser} setScore={setScore}/>
       }
       <button onClick={() => {setOpenR(true)}} className='btn-rules'>RULES</button>
