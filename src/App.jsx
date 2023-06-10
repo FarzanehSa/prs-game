@@ -4,7 +4,7 @@ import './App.scss';
 // import Score from './Score';
 // import MainEasy from './MainEasy';
 // import ResultEasy from './ResultEasy';
-// import RulesEasy from './RulesEasy';
+import RulesEasy from './RulesEasy';
 
 // import { ReactComponent as Lizard } from './images/icon-lizard.svg';
 // import { ReactComponent as Spock } from './images/icon-spock.svg';
@@ -33,7 +33,7 @@ function App() {
         className="modal"
         shouldCloseOnOverlayClick={false}
       >
-        {/* {openR && <RulesEasy  onClose={closeModal} />} */}
+        {openR && <RulesEasy  onClose={closeModal} />}
       </Modal>
 
       {/* <Score score={score}/> */}
