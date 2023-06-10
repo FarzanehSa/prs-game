@@ -1,0 +1,88 @@
+@import '../styles/_variables.scss';
+
+.input-area {
+  min-height: 20vh;
+  width: 100%;
+  min-width: 236px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  .showed-correct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .letter {
+      border-bottom: 3px solid $main-btn-color;
+      height: 3rem;
+      width: 1.5rem;
+      margin-left: 0.2rem;
+      margin-right: 0.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.2rem;
+      color: $main-font-color;
+  
+      .letter-v {
+        display: inline-block;
+      }
+      .letter-h {
+        display: none;
+      }
+      .letter-end {
+        animation: animation 5s infinite;
+      }
+      @keyframes animation {
+        0% {opacity: 0; 
+          transform: translateY(-100px) skewY(10deg) skewX(10deg) rotateZ(30deg);
+          filter: blur(10px);
+          -webkit-filter: blur(10px);
+          -moz-filter: blur(10px);
+          -ms-filter: blur(10px);
+          }
+        25% {opacity: 1;
+          transform: translateY(0px) skewY(0deg) skewX(0deg) rotateZ(0deg);
+          filter: blur(0px);
+          -webkit-filter: blur(0px);
+          -moz-filter: blur(0px);
+          -ms-filter: blur(0px);
+          }
+        75% {opacity: 1;
+          transform: translateY(0px) skewY(0deg) skewX(0deg) rotateZ(0deg);
+          filter: blur(0px);
+          -webkit-filter: blur(0px);
+          -moz-filter: blur(0px);
+          -ms-filter: blur(0px);
+        }
+        100% {opacity: 1;
+          transform: translateY(0px) skewY(0deg) skewX(0deg) rotateZ(0deg);
+          filter: blur(0px);
+          -webkit-filter: blur(0px);
+          -moz-filter: blur(0px);
+          -ms-filter: blur(0px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .input-area {
+    min-height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .showed-correct {  
+      .letter {
+        border-bottom: 3px solid $main-btn-color;
+        height: 2rem;
+        width: 1.3rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

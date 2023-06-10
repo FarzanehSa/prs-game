@@ -1,0 +1,11 @@
+@import "./styles/variables.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: $main-font-family;
+}
+
+body {
+  margin: 0;
+  font-size: 30px;
+}

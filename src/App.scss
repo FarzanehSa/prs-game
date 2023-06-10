@@ -1,0 +1,104 @@
+@import "./styles/variables.scss";
+
+.app {
+  // border: $test;
+  min-height: 100vh;
+  // height: 100%;
+  width: 100%;
+  overflow: hidden;
+  min-width: 320px;
+  background-color: $app-background-color;
+  position: relative;
+
+  .up-800 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .row-data {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .display-500-800 {
+    display: none;
+  }
+  .down-500 {
+    display: none;
+  }
+}
+
+.a-modal {
+  background-color: $app-background-color;
+  border-radius: 20px 60px 20px 60px;
+  padding: 2em;
+  min-width: 30%;
+  z-index: 2000;
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    .up-800 {
+      display: none;
+    }
+    .down-500 {
+      display: none;
+    }
+    .display-500-800 {
+      display: flex;
+      flex-direction: column;
+      .row-data {
+        display: flex;
+        flex-direction: row;
+      }
+      .column-data-l,  .column-data-r{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+    }
+  }
+  .a-modal {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app {
+    .up-800 {
+      display: none;
+    }
+    .display-500-800 {
+      display: none;
+    }
+    .down-500 {
+      display: flex;
+      flex-direction: column;
+      .row-data-u {
+        display: flex;
+        flex-direction: row;
+      }
+      .row-data-d {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .a-modal {
+    padding: 1em;
+  }
+
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.cdnfonts.com/css/kitschy-retro');
+@import url('https://fonts.cdnfonts.com/css/gumela');
+@import url('https://fonts.cdnfonts.com/css/shizuru');
+@import url('https://fonts.cdnfonts.com/css/big-ten');
+
+// font
+$main-font-family: 'Gumela';
+$title-font-family: 'Big Ten', sans-serif;
+// $title-font-family: 'Kitschy Retro', sans-serif;
+// $title-font-family: 'Shizuru', sans-serif;
+
+// font-color
+$main-font-color: #fff;
+
+// border
+$test       : 2px solid black;
+$test1      : 2px solid red;
+$test2      : 2px solid blue;
+$test3      : 2px solid green;
+
+// background
+$app-background-color : indigo;
+
+// button
+$main-btn-color: #DAA520;
+$inactive-btn-color: #C0C0C0;
+$diag-line-color: #B22222;
+
+@mixin g-button {
+  margin: 0.2rem;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
